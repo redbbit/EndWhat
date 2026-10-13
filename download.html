@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>下载 Windows 版 · 未竟之言</title>
+<meta name="description" content="安装版 482 MB / 绿色版 159 MB + 服务端 245 MB / 可选组件 97 MB，附 SHA256 校验值与下载前须知。">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">未竟之言 | EndWhat</div>
+    <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="features.html">功能与边界</a>
+        <a href="privacy.html">隐私与云端</a>
+        <a href="docs.html">文档</a>
+        <a href="faq.html">常见问题</a>
+        <a href="about.html">关于</a>
+        <a href="download.html" class="btn-nav">下载 Windows 版</a>
+    </div>
+</nav>
+
+<section class="section mt-nav section-narrow">
+    <h2 class="section-title">下载 Windows 版</h2>
+    <p class="legal-meta">版本：v1.0.0 ｜ 发布日期：2026-10-13 ｜ 平台：Windows 10 / 11（64 位）</p>
+
+    <p class="legal-notice">
+        ⚠️ <strong>请只从官方 Release 页面下载。</strong>任何第三方渠道的安装包都不在我们的控制范围内；若校验值不符，请立即删除并重新从官方渠道获取。
+    </p>
+
+    <div style="text-align: center; margin: 2.5rem 0;">
+        <a href="https://github.com/redbbit/EndWhat/releases/latest" class="btn btn-primary" target="_blank" rel="noopener" style="font-size: 1.1rem; padding: 1rem 3rem;">
+            ↓ 前往 GitHub Release 下载最新版
+        </a>
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+            历史版本：<a href="https://github.com/redbbit/EndWhat/releases/tag/v1.0.0">v1.0.0</a>
+        </p>
+    </div>
+
+    <h3 style="margin-top: 3rem; color: var(--accent);">📦 本版包含的文件</h3>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">以下是 v1.0.0 的四个分发件，请在 Release 页面选择你需要的文件下载。</p>
+
+    <div class="file-card">
+        <div class="file-card-header">
+            <span class="badge badge-done">推荐</span>
+            <strong>安装版</strong>
+        </div>
+        <p class="file-name">EndWhat-Setup-1.0.0.exe</p>
+        <p class="file-meta">体积：<code>506,049,366 B（482.61 MB）</code></p>
+        <p class="file-meta">用途：自动安装客户端 + 服务端（可选带本地嵌入运行时离线包），创建快捷方式。适合大多数用户。</p>
+        <p class="file-hash">SHA256：<code>95517ffae2ada2f41026f9f6c2160b9a7b30caabe227c95ed848afb77ff62e82</code></p>
+    </div>
+
+    <div class="file-card">
+        <div class="file-card-header">
+            <span class="badge badge-part">绿色版</span>
+            <strong>客户端</strong>
+        </div>
+        <p class="file-name">EndWhat-1.0.0.tar.xz</p>
+        <p class="file-meta">体积：<code>166,719,024 B（159.00 MB）</code></p>
+        <p class="file-meta">用途：解压即用的客户端。需与下方的「绿色版服务端」配合使用。</p>
+        <p class="file-hash">SHA256：<code>b5690780ff70a577968cc3243166d0fc638d98f7018a3ee3931ebda79e39c7a8</code></p>
+    </div>
+
+    <div class="file-card">
+        <div class="file-card-header">
+            <span class="badge badge-part">绿色版</span>
+            <strong>服务端</strong>
+        </div>
+        <p class="file-name">EndWhat-Server-1.0.0.tar.xz</p>
+        <p class="file-meta">体积：<code>257,394,132 B（245.47 MB）</code></p>
+        <p class="file-meta">用途：本地服务（记忆、性格演化、世界线等）。需与上方的「绿色版客户端」配合使用。</p>
+        <p class="file-hash">SHA256：<code>198ad3aa5c35e2f9622c2dd3c6c31b0f59ca24b34bf5c720989a78e98e365840</code></p>
+    </div>
+
+    <div class="file-card">
+        <div class="file-card-header">
+            <span class="badge badge-off">可选组件</span>
+            <strong>本地嵌入运行时</strong>
+        </div>
+        <p class="file-name">embed-runtime-1.0.0.tar.xz</p>
+        <p class="file-meta">体积：<code>101,698,936 B（96.99 MB）</code></p>
+        <p class="file-meta">用途：本地向量记忆所需的 CPU 运行时。不安装时「记忆写入与语义检索」将降级；其余功能不受影响。</p>
+        <p class="file-hash">SHA256：<code>b76080b42bd96e03dc4ca3404b4e2c8fb65be20a82340f2e74fd3f13f4b02a56</code></p>
+    </div>
+
+    <h3 style="margin-top: 3rem; color: var(--accent);">🔐 如何校验 SHA256</h3>
+    <p>下载后，在文件所在目录打开 PowerShell，执行：</p>
+    <pre><code>Get-FileHash .\EndWhat-Setup-1.0.0.exe -Algorithm SHA256</code></pre>
+    <p>或使用命令提示符（certutil）：</p>
+    <pre><code>certutil -hashfile "EndWhat-Setup-1.0.0.exe" SHA256</code></pre>
+    <p>将结果与上方 SHA256 逐字比对，一致即表示文件完整未被篡改。<strong>小写比对即等价</strong>。</p>
+
+    <h3 style="margin-top: 3rem; color: var(--accent);">📋 下载前须知</h3>
+
+    <details>
+        <summary>① 系统要求</summary>
+        <table class="info-table">
+            <tbody>
+                <tr><td>操作系统</td><td>Windows 10 / 11（64 位）。当前不提供 macOS / Linux 版。</td></tr>
+                <tr><td>磁盘空间</td><td>建议预留 20 GB 以上（客户端 + 服务端 + 可选组件 + 本地模型）</td></tr>
+                <tr><td>内存</td><td>最低 8 GB；建议 16 GB 及以上（服务端 7 个服务稳态合计约 5.4 GB）</td></tr>
+                <tr><td>显卡</td><td>可选，CPU 即可运行；有 GPU 会更快</td></tr>
+                <tr><td>本地对话模型</td><td>需自备（例如 Ollama + Qwen2.5 系列），不随包分发</td></tr>
+                <tr><td>网络</td><td>安装与基础对话不需要联网；仅在你主动下载组件/模型、启用云端 API、使用联网搜索时才会出网</td></tr>
+                <tr><td>权限</td><td>不需要管理员权限；安装到当前用户目录</td></tr>
+            </tbody>
+        </table>
+    </details>
+
+    <details>
+        <summary>② 安装后占用（诚实告知）</summary>
+        <table class="info-table">
+            <tbody>
+                <tr><td>客户端解压后</td><td>约 604 MB</td></tr>
+                <tr><td>服务端解压后</td><td>约 925 MB</td></tr>
+                <tr><td>可选组件解压后</td><td>约 520 MB</td></tr>
+                <tr><td>嵌入模型权重</td><td>约 4.3 GB（另需按引导下载）</td></tr>
+                <tr><td>本地对话模型</td><td>另需数 GB（取决于你选择的模型）</td></tr>
+            </tbody>
+        </table>
+        <p>⚠️ <strong>安装包体积 ≠ 安装后占用</strong>：安装包是压缩分发件，安装到磁盘后所有文件解压，总占用会显著增大。</p>
+    </details>
+
+    <details>
+        <summary>③ 数据与隐私</summary>
+        <ul>
+            <li>数据默认保存于你选定的本地目录（默认 <code>%LOCALAPPDATA%\EndWhat\data</code>）；卸载程序<strong>不会</strong>自动删除数据目录。</li>
+            <li>不主动收集任何用户数据；不接入统计、埋点、广告 SDK。</li>
+            <li>隐私财产以 <strong>AES-256-GCM</strong> 加密存储，密钥保存在本机 <code>.key</code> 文件（权限 600）。</li>
+            <li>支持<strong>全本地离线</strong>，也支持<strong>逐能力启用云端 API</strong>。</li>
+            <li>一旦启用云端 API，该能力当次所需数据将发送给你选定的第三方服务商，其数据处理方式由其隐私政策约束，我们无法控制。</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>④ 责任声明</summary>
+        <ul>
+            <li>本软件按"现状"提供，不提供明示或默示担保。免费分发版本不承担赔偿责任。</li>
+            <li>AI 生成内容仅供陪伴娱乐，<strong>不得作为现实决策依据</strong>。</li>
+            <li>本软件不是医疗、心理、法律或金融建议工具。出现持续情绪困扰，请寻求专业帮助或拨打心理援助热线 <strong>12356</strong>。</li>
+            <li>不面向未成年人（需年满 18 周岁确认）。长期使用可能产生情感依赖，请注意使用时长。</li>
+            <li>你对自己配置的云端 API、安装的第三方插件与数据备份负责。</li>
+            <li>包含开源组件（如 PyQt6 GPL v3 双许可、Qt LGPL v3 等），再分发请遵守相应许可证义务。</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>⑤ 已知限制（首次发布请知悉）</summary>
+        <ul>
+            <li><strong>Windows 11 托盘图标</strong>：系统默认把新出现的托盘图标收进任务栏「^」溢出区。若关闭主窗口后"找不到程序"，请点「^」找到"未竟之言"图标并右键"固定到任务栏"。</li>
+            <li><strong>美术资源</strong>：当前版本部分角色立绘仍为占位图；Live2D 需你自备模型文件，缺模型时自动降级为静态立绘。</li>
+            <li><strong>插件市场</strong>：初始为空，需要你自行安装插件包。</li>
+            <li><strong>本地模型与硬件</strong>：本地模型的可用性与速度取决于你的内存/显存；配置不足时功能会受限，程序会给出提示。</li>
+        </ul>
+    </details>
+
+    <p style="text-align: center; margin-top: 3rem;">
+        <a href="terms.html">用户协议</a> ｜ 
+        <a href="privacy.html">隐私政策</a> ｜ 
+        <a href="features.html">功能与边界</a>
+    </p>
+</section>
+
+<footer>
+    <p><strong style="color: var(--accent);">未竟之言 | EndWhat</strong> · v1.0.0</p>
+    <p>© 2026 redbbit ｜ <a href="mailto:2242858980@qq.com">2242858980@qq.com</a></p>
+    <p><a href="terms.html">用户协议</a> ｜ <a href="privacy.html">隐私政策</a> ｜ <a href="about.html">开源组件</a> ｜ <a href="changelog.html">更新日志</a></p>
+    <p class="footer-note">本软件对话与图片均由 AI 生成，请勿作为现实决策依据。</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

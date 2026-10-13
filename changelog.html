@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>更新日志 · 未竟之言</title>
+<meta name="description" content="版本变更、安全修复与协议版本变更记录。">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">未竟之言 | EndWhat</div>
+    <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="features.html">功能与边界</a>
+        <a href="privacy.html">隐私与云端</a>
+        <a href="docs.html">文档</a>
+        <a href="faq.html">常见问题</a>
+        <a href="about.html">关于</a>
+        <a href="download.html" class="btn-nav">下载 Windows 版</a>
+    </div>
+</nav>
+
+<section class="section mt-nav section-narrow">
+    <h2 class="section-title">更新日志</h2>
+    <p class="legal-meta">按版本倒序排列 ｜ 安全修复单独标注 ｜ 当前最新：v1.0.0</p>
+
+    <div class="legal-content">
+        <h3>v1.0.0 · 2026-10-13 · 首个公开发布版</h3>
+        <p><strong>新增</strong></p>
+        <ul>
+            <li>长期记忆：分层记忆 + 向量检索，含不可逆生命史（哈希链）。</li>
+            <li>会变的性格：属性引擎、决策模式路由、生物节律、后台梦境、反思引擎、冲突与和解。</li>
+            <li>平行世界线：世界线管理器、时间胶囊与未来信件、世界场景与触发器。</li>
+            <li>外在形象：立绘资源管理器、桌宠模式、Live2D 渲染层（模型需自备）。</li>
+            <li>语音与图像：本地 piper TTS、本地 faster-whisper STT（默认开启）；图像生成与 AI 立绘为接口 + 骨架，默认关闭。</li>
+            <li>插件系统：插件注册中心、T1 子进程沙箱、本地演示市场界面。</li>
+            <li>安全与合规：18+ 首启向导、AES-256-GCM 隐私财产加密、AI 内容双标识、使用时长提醒（120 分钟）、危机干预提示（热线 12356）、数据导出 ZIP、72 小时安全事件响应。</li>
+            <li>自研界面：PyQt6 + QML 主界面与设置中心。</li>
+        </ul>
+
+        <p><strong>分发文件（v1.0.0）</strong></p>
+        <table class="info-table">
+            <thead>
+                <tr><th>文件</th><th>体积</th><th>SHA256（截取）</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EndWhat-Setup-1.0.0.exe</td>
+                    <td>506,049,366 B（482.61 MB）</td>
+                    <td><code>95517ffa…62e82</code></td>
+                </tr>
+                <tr>
+                    <td>EndWhat-1.0.0.tar.xz</td>
+                    <td>166,719,024 B（159.00 MB）</td>
+                    <td><code>b5690780…9c7a8</code></td>
+                </tr>
+                <tr>
+                    <td>EndWhat-Server-1.0.0.tar.xz</td>
+                    <td>257,394,132 B（245.47 MB）</td>
+                    <td><code>198ad3aa…65840</code></td>
+                </tr>
+                <tr>
+                    <td>embed-runtime-1.0.0.tar.xz</td>
+                    <td>101,698,936 B（96.99 MB）</td>
+                    <td><code>b76080b4…2a56</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>完整 SHA256 与校验方法见 <a href="download.html">下载页</a>。</p>
+
+        <p><strong>法律文本</strong></p>
+        <ul>
+            <li>用户协议 v1.0（定稿 2026-10-02）</li>
+            <li>隐私政策 v1.0（定稿 2026-10-02）</li>
+            <li>本版本为首次公开发布，随包文本与官网可访问文本版本号一致。</li>
+        </ul>
+
+        <p><strong>已知限制</strong></p>
+        <ul>
+            <li>部分角色立绘为占位图；Live2D 需你自备模型文件。</li>
+            <li>本地对话模型需你自备（如 Ollama + Qwen2.5）；LM Studio / llama.cpp 等 OpenAI 兼容服务目前不直接支持。</li>
+            <li>远程插件市场默认关闭；插件市场当前为本地演示市场。</li>
+            <li>Windows 11 托盘图标需在溢出区手动固定。</li>
+            <li>没有跨设备同步（无云端账号体系）。</li>
+        </ul>
+
+        <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem;">
+            后续版本将在此处按倒序追加。安全修复会单独标注 <strong style="color: var(--accent);">【安全】</strong>，写清「影响范围 + 已修复版本 + 用户该做什么」，<strong>不写</strong>利用细节、PoC、复现步骤。确需说明时在修复发布 ≥ 30 天后另发技术说明。
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p><strong style="color: var(--accent);">未竟之言 | EndWhat</strong> · v1.0.0</p>
+    <p>© 2026 redbbit ｜ <a href="mailto:2242858980@qq.com">2242858980@qq.com</a></p>
+    <p><a href="terms.html">用户协议</a> ｜ <a href="privacy.html">隐私政策</a> ｜ <a href="about.html">开源组件</a> ｜ <a href="changelog.html">更新日志</a></p>
+    <p class="footer-note">本软件对话与图片均由 AI 生成，请勿作为现实决策依据。</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

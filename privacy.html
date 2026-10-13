@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本地优先与隐私 · 未竟之言</title>
+<meta name="description" content="不收集、不上传、加密存储；四类联网行为逐条公开；第三方 API 与跨境传输如实告知；数据可导出可彻底删除。">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">未竟之言 | EndWhat</div>
+    <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="features.html">功能与边界</a>
+        <a href="privacy.html">隐私与云端</a>
+        <a href="docs.html">文档</a>
+        <a href="faq.html">常见问题</a>
+        <a href="about.html">关于</a>
+        <a href="download.html" class="btn-nav">下载 Windows 版</a>
+    </div>
+</nav>
+
+<section class="section mt-nav section-narrow">
+    <h2 class="section-title">本地优先与隐私</h2>
+    <p class="legal-meta">版本：v1.0 ｜ 最后更新：2026年10月</p>
+    <p class="legal-notice">一句话结论：本软件默认完全离线，不主动收集您的数据。只有您主动开启云端 API 或联网搜索等功能时，才会产生网络请求，且只发送当次任务所需的字段。</p>
+
+    <div class="legal-content">
+        <h3>一、我们不做什么</h3>
+        <ul>
+            <li>不收集身份信息、通讯录、位置、设备标识；</li>
+            <li>不接入使用行为统计、埋点或广告 SDK；</li>
+            <li>不把对话、记忆、角色数据上传到开发者服务器（我们也没有这样的服务器）；</li>
+            <li>不主动将您的数据用于训练；</li>
+            <li>绝不静默下载模型或组件；</li>
+            <li>不要求注册账号，因此也没有跨设备云同步。</li>
+        </ul>
+
+        <h3>二、本机保存什么</h3>
+        <p>以下内容只写进您选定的数据目录（默认 <code>%LOCALAPPDATA%\EndWhat\data</code>，首次启动可自选）：</p>
+        <ul>
+            <li>对话记录、记忆条目（本机 SQLite 数据库与向量索引）；</li>
+            <li>角色、属性、世界线、关系数据；</li>
+            <li>立绘、生成的图片、头像；</li>
+            <li>插件与设置文件；</li>
+            <li>运行日志（仅事件类型/时间戳/错误信息，不含对话与记忆内容）；</li>
+            <li>加密密钥 .key（权限 600，首次使用时本机随机生成）。</li>
+        </ul>
+
+        <h3>三、什么时候会出网（四类）</h3>
+        <ol>
+            <li><strong>云端 API 调用</strong> — 只对您显式路由到云端的能力，且只在该能力被使用时；</li>
+            <li><strong>联网搜索</strong> — 默认关闭；您打开后，只发送搜索关键词；</li>
+            <li><strong>插件市场</strong> — 只在您打开浏览或安装时；</li>
+            <li><strong>检查更新</strong> — 只在您点击检查、或您保持自动检查开启时。</li>
+        </ol>
+        <p>除上述四类外，本软件不发起任何其他网络请求，也不包含任何统计、广告或崩溃遥测 SDK。</p>
+
+        <h3>四、第三方 API 与跨境传输</h3>
+        <p>云端 API 的密钥由您自行配置，仅保存在本机（<code>%数据目录%\settings\secrets.json</code>，权限 600）。一旦启用某能力的云端 API，该能力当次所需的数据会发送给您选定的第三方服务商，其数据处理方式由其隐私政策约束，我们无法控制。如您配置的服务在境外，数据将传输至境外，请自行确认合规要求。如不接受，请保持全本地设置。</p>
+
+        <h3>五、第三方插件</h3>
+        <p>第三方插件的数据访问行为由其自身负责。安装插件时程序会展示其权限声明，由您确认后授权。您可随时禁用或卸载插件；权限变更会记录在本地权限审计日志中。</p>
+
+        <h3>六、数据导出与删除（您的数据可携带权）</h3>
+        <ul>
+            <li><strong>导出</strong>：程序内「关于 → 导出我的数据…」导出为 ZIP（标准 SQLite + JSON，<strong>不加密</strong>，便于迁移；请妥善保管）。</li>
+            <li><strong>删除</strong>：可直接删除数据目录中的文件；<strong>卸载程序不会自动删除数据目录</strong>。需要彻底清除时，请在卸载后手动删除数据目录——删除后不可恢复。</li>
+        </ul>
+
+        <h3>七、数据安全事件响应</h3>
+        <p>本软件为单机运行，无服务器端 7×24 监控。安全问题的发现途径：您的反馈（<a href="mailto:2242858980@qq.com">2242858980@qq.com</a>，标题注明"安全"）、安全社区与公开披露信息、以及本机自查线索（不含内容的操作日志、核心数据文件完整性校验、异常外联提示）。</p>
+        <p>一旦确认发生影响您数据安全的事件，我们将在 <strong>72 小时</strong>内通过 <strong>应用内弹窗 + 电子邮件（若您曾提供）+ 官网公告</strong> 三种方式通知您，并说明事件内容与影响、已采取的处置措施、您可自主采取的防范建议以及联系方式。</p>
+        <p>由于数据存储在您自己本机，<strong>数据目录本身的失窃风险需您自行防护</strong>（设置电脑登录口令、做好备份、不使用来源不明的插件）。</p>
+
+        <h3>八、AI 内容标识</h3>
+        <p>对话界面固定标注"AI 生成内容"；导出的图片/文本保留<strong>显式标识</strong>（「AI 生成」水印）与<strong>隐式标识</strong>（文件元数据中的生成合成内容属性、服务提供者编码等），符合《人工智能生成合成内容标识办法》的要求。</p>
+
+        <h3>九、未成年人</h3>
+        <p>本软件不面向未成年人。首次启动需确认<strong>已年满 18 周岁</strong>；如未满 18 周岁请停止使用。</p>
+
+        <h3>十、联系方式与安全通知时限</h3>
+        <ul>
+            <li>邮箱：<a href="mailto:2242858980@qq.com">2242858980@qq.com</a>（安全问题请注明"安全"）</li>
+            <li>官网：<a href="https://redbbit.github.io">https://redbbit.github.io</a></li>
+            <li>安全事件通知时限：<strong>确认后 72 小时内</strong></li>
+            <li>一般咨询回复时限：<strong>15 个工作日</strong>内</li>
+        </ul>
+
+        <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem;">
+            本页是《隐私政策》v1.0 的通俗摘要。完整条款（含数据安全事件响应、版本历史、与实现的一致性核对）以随包 <code>privacy_policy_v1.md</code> 为准。
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p><strong style="color: var(--accent);">未竟之言 | EndWhat</strong> · v1.0.0</p>
+    <p>© 2026 redbbit ｜ <a href="mailto:2242858980@qq.com">2242858980@qq.com</a></p>
+    <p><a href="terms.html">用户协议</a> ｜ <a href="privacy.html">隐私政策</a> ｜ <a href="about.html">开源组件</a> ｜ <a href="changelog.html">更新日志</a></p>
+    <p class="footer-note">本软件对话与图片均由 AI 生成，请勿作为现实决策依据。</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
